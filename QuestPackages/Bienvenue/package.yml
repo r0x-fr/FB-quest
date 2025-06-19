@@ -12,5 +12,5 @@ languages:
   - fr
 
 player_hider:
-  no_player: # Aucun joueur n'est visible au spawn newbies
+  no_player:  # Aucun joueur n'est visible au spawn newbies
     source_player: at_newbie_spawn

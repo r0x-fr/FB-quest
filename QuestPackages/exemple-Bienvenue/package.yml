@@ -2,7 +2,7 @@
 name: "exemple-Bienvenue"
 author: "r0x.fr"
 description: "À la découverte d'un monde étrange"
-enabled: false # Quête désactivée
+enabled: false  # Quête désactivée
 
 npcs:
   "8": Edouard
@@ -12,5 +12,5 @@ languages:
   - fr
 
 player_hider:
-  no_player: # Aucun joueur n'est visible au spawn newbies
+  no_player:  # Aucun joueur n'est visible au spawn newbies
     source_player: at_newbie_spawn
