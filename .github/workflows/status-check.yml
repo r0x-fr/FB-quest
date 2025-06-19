@@ -8,16 +8,23 @@ on:
 
 jobs:
   lint-yaml:
-    name: ✅ Validation YAML
+    name: ✅ Vérification YAML sans warnings
     runs-on: ubuntu-latest
 
     steps:
-      - name: 🔄 Checkout du dépôt
+      - name: 🔄 Récupération du dépôt
         uses: actions/checkout@v4
 
-      - name: 🔧 Installer yamllint
+      - name: 📦 Installer yamllint
         run: sudo apt-get update && sudo apt-get install -y yamllint
 
-      - name: 🔍 Linter tous les fichiers YAML
+      - name: 🔍 Vérifier uniquement les erreurs YAML
         run: |
-          yamllint . --format colored
+          yamllint -f parsable . | tee yamllint.log
+          # Si des erreurs (et uniquement des erreurs) sont présentes, fail
+          if grep -q 'error' yamllint.log; then
+            echo "::error::Des erreurs YAML ont été détectées."
+            exit 1
+          else
+            echo "✅ Aucun problème bloquant détecté."
+          fi
