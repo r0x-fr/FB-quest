@@ -1,0 +1,23 @@
+name: YAML Lint
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  lint-yaml:
+    name: ✅ Validation YAML
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🔄 Checkout du dépôt
+        uses: actions/checkout@v4
+
+      - name: 🔧 Installer yamllint
+        run: sudo apt-get update && sudo apt-get install -y yamllint
+
+      - name: 🔍 Linter tous les fichiers YAML
+        run: |
+          yamllint . --format colored
