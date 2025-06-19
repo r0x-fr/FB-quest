@@ -1,0 +1,4 @@
+objectives:
+  suivre_edouard: "location -1234;182;-1030;world 1 event:edouard_arrive"
+  #at_spawn: "location -1129.5;178;-940.5;world 5 event:now_at_spawn"
+  at_spawn: "delay 6 seconds events:now_at_spawn"

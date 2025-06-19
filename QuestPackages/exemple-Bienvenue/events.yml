@@ -1,0 +1,16 @@
+events:
+  # Depart vers la montgolfière
+  go_to_montgolfiere: "folder deplacement_edouard,objectif_montgolfiere,already_talked"
+  deplacement_edouard: "movenpc 8 -1230.6;183;-1028.4;world block wait:40"
+  objectif_montgolfiere: "objective start suivre_edouard"
+  already_talked: "tag add already_talked_edouard"
+  # Arrivée à la montgolfière
+  edouard_arrive: "conversation Edouard option:edouard_arriver"
+  # L'envol
+  start_tp_sequence: "folder tp_sequence,tag_debut_quete"
+  tag_debut_quete: "tag add already_teleported"
+  tp_sequence: "command bqt_tp_sequence %player%"
+  arrived_spawn: "objective start at_spawn"
+  # Au spawn
+  now_at_spawn: "folder success_arrived"
+  success_arrived: "teleportnpc 8 -1247;182;-1027;world"
