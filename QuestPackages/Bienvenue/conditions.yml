@@ -1,4 +1,5 @@
-conditions: 
+---
+conditions:
   already_teleported: "tag already_teleported"
   montgolfiere: "region spawn-newbies-tp"
   at_newbie_spawn: "region spawn-newbies"

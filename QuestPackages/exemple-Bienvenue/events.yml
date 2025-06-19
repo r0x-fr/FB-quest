@@ -1,6 +1,8 @@
+---
 events:
   # Depart vers la montgolfière
-  go_to_montgolfiere: "folder deplacement_edouard,objectif_montgolfiere,already_talked"
+  go_to_montgolfiere:
+    "folder deplacement_edouard,objectif_montgolfiere,already_talked"
   deplacement_edouard: "movenpc 8 -1230.6;183;-1028.4;world block wait:40"
   objectif_montgolfiere: "objective start suivre_edouard"
   already_talked: "tag add already_talked_edouard"

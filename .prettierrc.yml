@@ -1,0 +1,4 @@
+printWidth: 80         # ⬅️ limite à 80 caractères max
+tabWidth: 2            # indentation à 2 espaces (classique YAML)
+useTabs: false         # n’utilise pas de tabulations
+proseWrap: always      # force les retours à la ligne dans les blocs de texte

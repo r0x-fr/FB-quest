@@ -1,3 +1,4 @@
+---
 conversations:
   Edouard:
     quester: "Édouard"
@@ -6,16 +7,24 @@ conversations:
 
     NPC_options:
       already_talked_edouard:
-        text: "Salut ! Tu reviens me voir, c'est gentil ! J'accueille toujours les arrivants."
+        text:
+          "Salut ! Tu reviens me voir, c'est gentil ! J'accueille toujours les
+          arrivants."
         conditions: "already_teleported"
 
       intro:
-        text: "Oh, bienvenue !\n\nTu sembles perdu, non ? Je suppose que toi aussi, comme les autres, tu es arrivé ici sans trop savoir comment.\n\n&7&oSaute pour valider la réponse, avance ou recule pour changer de réponse."
+        text:
+          "Oh, bienvenue !\n\nTu sembles perdu, non ? Je suppose que toi aussi,
+          comme les autres, tu es arrivé ici sans trop savoir
+          comment.\n\n&7&oSaute pour valider la réponse, avance ou recule pour
+          changer de réponse."
         pointer: "rep_1"
         conditions: "!already_teleported"
 
       intro_3:
-        text: "Ne t’inquiète pas, profite de la vue. Et quand tu te sentiras prêt, monte dans la montgolfière et retrouve PEDRO."
+        text:
+          "Ne t’inquiète pas, profite de la vue. Et quand tu te sentiras prêt,
+          monte dans la montgolfière et retrouve PEDRO."
         pointer: "accept_tp"
 
       pre_tp:
