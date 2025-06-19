@@ -3,7 +3,6 @@ author: "r0x.fr"
 description: "À la découverte d'un monde étrange"
 enabled: false # Quête désactivée
 
-
 npcs:
   '8': Edouard
 
