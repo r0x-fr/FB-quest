@@ -1,0 +1,46 @@
+conversations:
+  Edouard:
+    quester: "Édouard"
+    first: "already_talked_edouard,intro"
+    stop: false
+
+    NPC_options:
+      already_talked_edouard:
+        text: "Salut ! Tu reviens me voir, c'est gentil ! J'accueille toujours les arrivants."
+        conditions: "already_teleported"
+
+      intro:
+        text: "Oh, bienvenue !\n\nTu sembles perdu, non ? Je suppose que toi aussi, comme les autres, tu es arrivé ici sans trop savoir comment.\n\n&7&oSaute pour valider la réponse, avance ou recule pour changer de réponse."
+        pointer: "rep_1"
+        conditions: "!already_teleported"
+
+      intro_3:
+        text: "Ne t’inquiète pas, profite de la vue. Et quand tu te sentiras prêt, monte dans la montgolfière et retrouve PEDRO."
+        pointer: "accept_tp"
+
+      pre_tp:
+        text: "Parfait, viens à la montgolfière."
+        event: "go_to_montgolfiere"
+
+      edouard_arriver:
+        text: "Nous voici à la montgolfière."
+        conditions: "montgolfiere"
+        pointer: "pre_go"
+
+      go:
+        text: "Tu verras c'est sympa !"
+        event: "start_tp_sequence"
+
+    player_options:
+      accept_tp:
+        text: "Je suis prêt, envoie-moi là-bas !"
+        pointer: "pre_tp"
+      rep_1:
+        text: "Oui, je suis un peu perdu."
+        pointer: "intro_3"
+      rep_2:
+        text: "Je suis là !"
+        pointer: "go"
+      pre_go:
+        text: "Ok... Allons-y, je suppose."
+        pointer: "go"
